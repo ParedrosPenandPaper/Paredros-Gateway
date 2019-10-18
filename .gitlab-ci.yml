@@ -11,6 +11,9 @@ test:
   
 vue-build:
   stage: vue-build
+  artifacts:
+    paths:
+      - dist
   script:
     - npm install --progress=false
     - npm run build
