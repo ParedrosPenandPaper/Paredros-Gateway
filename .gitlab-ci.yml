@@ -1,27 +1,29 @@
 stages:
   - test
-  - build
+  - install-dependencies
+  - vue-build
+  - docker-build
   
-test-image:
+test:
   stage: test
   script: echo 'running tests....'
   tags:
     - deploy
 
 install-dependencies:
-  stage: build
+  stage: install-dependencies
   script: npm install
   tags:
     - deploy
   
 vue-build:
-  stage: build
+  stage: vue-build
   script: npm run build
   tags:
     - deploy
 
 docker-build:
-  stage: build
+  stage: docker-build
   script: docker build -t paredros-gateway .
   tags:
     - deploy
