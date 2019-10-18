@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY dist/ .
 COPY server/ .
 
-RUN npm install express
+RUN npm install
 
 EXPOSE 80
 
