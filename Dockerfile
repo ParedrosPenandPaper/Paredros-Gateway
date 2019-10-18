@@ -2,8 +2,8 @@ FROM node:10.6-alpine
 
 WORKDIR /usr/src/app
 
-COPY dist/ .
-COPY server.js .
+COPY src/dist/ .
+COPY src/server.js .
 
 EXPOSE 80
 

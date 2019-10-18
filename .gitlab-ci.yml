@@ -1,6 +1,5 @@
 stages:
   - test
-  - install-dependencies
   - vue-build
   - docker-build
   
@@ -9,16 +8,12 @@ test:
   script: echo 'running tests....'
   tags:
     - deploy
-
-install-dependencies:
-  stage: install-dependencies
-  script: npm install
-  tags:
-    - deploy
   
 vue-build:
   stage: vue-build
-  script: npm run build
+  script:
+    - cd src
+    - vue build
   tags:
     - deploy
 
