@@ -3,7 +3,7 @@ FROM node:10.6-alpine
 WORKDIR /usr/src/app
 
 COPY dist/ .
-COPY server/* .
+COPY server/ .
 
 RUN npm install express
 
