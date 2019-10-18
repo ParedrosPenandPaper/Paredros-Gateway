@@ -1,7 +1,6 @@
 stages:
   - test
-  - vue-build
-  - docker-build
+  - build
   
 test:
   stage: test
@@ -9,14 +8,10 @@ test:
   tags:
     - deploy
   
-vue-build:
-  stage: vue-build
-  script: vue build src/main.js
-  tags:
-    - deploy
-
-docker-build:
-  stage: docker-build
-  script: docker build -t paredros-gateway .
+build:
+  stage: build
+  script: 
+    - vue build src/main.js
+    - docker build -t paredros-gateway .
   tags:
     - deploy
