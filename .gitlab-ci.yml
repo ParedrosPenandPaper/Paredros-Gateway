@@ -10,8 +10,9 @@ test:
   
 build:
   stage: build
-  script: 
-    - vue build src/main.js
+  script:
+    - npm install --progress=false
+    - npm run build
     - docker build -t paredros-gateway .
   tags:
     - deploy
