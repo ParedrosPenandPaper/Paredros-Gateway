@@ -1,0 +1,13 @@
+{
+    "name": "paredros-gateway",
+    "version": "1.0.0",
+    "description": "gateway server for project paredros",
+    "author": "Ismael Agchar <agcharis67705@th-nuernberg.de>",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }

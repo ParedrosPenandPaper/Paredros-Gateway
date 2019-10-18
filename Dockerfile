@@ -2,10 +2,11 @@ FROM node:10.6-alpine
 
 WORKDIR /usr/src/app
 
-RUN npm install express
 COPY dist/ .
-COPY server.js .
+COPY server/* .
+
+RUN npm install express
 
 EXPOSE 80
 
-CMD [ "node", "server.js" ]
+CMD [ "npm", "run", "start" ]
