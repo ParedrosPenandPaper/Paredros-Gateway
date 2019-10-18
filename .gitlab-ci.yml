@@ -5,7 +5,7 @@ stages:
   
 test:
   stage: test
-  script: echo 'running tests....'
+  script: node test/test.js
   tags:
     - deploy
   
