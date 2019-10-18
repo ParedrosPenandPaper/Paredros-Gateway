@@ -7,8 +7,20 @@ test-image:
   script: echo 'running tests....'
   tags:
     - deploy
+
+install-dependencies:
+  stage: build
+  script: npm install
+  tags:
+    - deploy
   
-build-image:
+vue-build:
+  stage: build
+  script: npm run build
+  tags:
+    - deploy
+
+docker-build:
   stage: build
   script: docker build -t paredros-gateway .
   tags:
