@@ -11,9 +11,7 @@ test:
   
 vue-build:
   stage: vue-build
-  script:
-    - cd src
-    - vue build
+  script: vue build src/main.js
   tags:
     - deploy
 
