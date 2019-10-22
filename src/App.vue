@@ -1,6 +1,11 @@
 <template>
   <div id="app">
 
+    <div id="title">
+      <label id="welcome-label">Welcome to <label id="project-label">Project</label></label>
+      <label id="paredros-label">Paredros</label>
+    </div>
+
     <div class="routing-panel" id="auth-container">
       <p id="auth-paragraph">login</p>
     </div>
@@ -43,6 +48,30 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: radial-gradient(white, white, #f2f2f2);
+}
+
+#title{
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-label{
+  font-size: 2em;
+}
+
+#project-label{
+  font-size: 2.5em;
+}
+
+#paredros-label{
+  font-size: 7em;
 }
 
 #auth-container{
@@ -68,10 +97,10 @@ export default {
 }
 
 .sized-routing-panel{
-  width: 20vw;
-  height: 20vw;
-  min-width: 200px;
-  min-height: 200px;
+  width: 10vw;
+  height: 10vw;
+  min-width: 100px;
+  min-height: 100px;
 
   margin: 50px;
 }
@@ -81,16 +110,16 @@ export default {
   justify-content: center;
   align-items: center;
 
-  border: 1px solid darkgrey;
+  background-color: #f2f2f2;
+  border: 2px solid #d9d9d9;
   border-radius: 10%;
-
-  background-color: #7eaacd;
 
   cursor: pointer;
 }
 
 .routing-panel:hover{
-  background-color: #a3c2db;
+  /* background-color: #a3c2db; */
+  background-image: radial-gradient(#c8daea, #6c9dc6);
 }
 
 .routing-panel:active{
