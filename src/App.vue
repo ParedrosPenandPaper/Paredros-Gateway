@@ -120,6 +120,7 @@ export default {
 .routing-panel:hover{
   /* background-color: #a3c2db; */
   background-image: radial-gradient(#c8daea, #6c9dc6);
+  border-color: #6c9dc6;
 }
 
 .routing-panel:active{
