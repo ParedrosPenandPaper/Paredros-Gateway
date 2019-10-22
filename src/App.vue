@@ -79,11 +79,11 @@ export default {
   top: 0;
   right: 0;
 
-  margin: 10px;
+  margin: 2vw;
 }
 
 #auth-paragraph{
-  margin: 1em;
+  margin: 1vh 1vw;
   font-size: 1.5em;
 }
 
