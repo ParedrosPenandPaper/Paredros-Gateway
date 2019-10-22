@@ -6,18 +6,18 @@
       <label id="paredros-label">Paredros</label>
     </div>
 
-    <div class="routing-panel" id="auth-container" @click="redirectTo('https://paredros-login/')">
+    <div class="routing-panel" id="auth-container" @click="redirectTo('https://login.paredros.com/')">
       <p id="auth-paragraph">login</p>
     </div>
 
     <div id="routing-panel-container">
-      <div id="creator-panel " class="routing-panel sized-routing-panel" @click="redirectTo('https://paredros-creator/')">
+      <div id="creator-panel " class="routing-panel sized-routing-panel" @click="redirectTo('https://creator.paredros.com/')">
         <p class="routing-panel-paragraph">creator</p>
       </div>
-      <div id="store-panel" class="routing-panel sized-routing-panel" @click="redirectTo('https://paredros-store/')">
+      <div id="store-panel" class="routing-panel sized-routing-panel" @click="redirectTo('https://store.paredros.com/')">
         <p class="routing-panel-paragraph">store</p>
       </div>
-      <div id="player-panel" class="routing-panel sized-routing-panel" @click="redirectTo('https://paredros-player/')">
+      <div id="player-panel" class="routing-panel sized-routing-panel" @click="redirectTo('https://player.paredros.com/')">
         <p class="routing-panel-paragraph">player</p>
       </div>
     </div>
@@ -80,6 +80,8 @@ export default {
   right: 0;
 
   margin: 2vw;
+
+  border-radius: 0.5vw;
 }
 
 #auth-paragraph{
@@ -112,13 +114,12 @@ export default {
 
   background-color: #f2f2f2;
   border: 2px solid #d9d9d9;
-  border-radius: 10%;
+  border-radius: 1vw;
 
   cursor: pointer;
 }
 
 .routing-panel:hover{
-  /* background-color: #a3c2db; */
   background-image: radial-gradient(#c8daea, #6c9dc6);
   border-color: #6c9dc6;
 }
