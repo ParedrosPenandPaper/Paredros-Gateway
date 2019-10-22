@@ -6,7 +6,7 @@
       <label id="paredros-label">Paredros</label>
     </div>
 
-    <div class="routing-panel" id="auth-container" @click="redirectTo('https://paredros-auth/')">
+    <div class="routing-panel" id="auth-container" @click="redirectTo('https://paredros-login/')">
       <p id="auth-paragraph">login</p>
     </div>
 
