@@ -10,13 +10,15 @@ const reverseProxy = httpProxy.createProxyServer({})
 app.use(express.static(__dirname))
 
 app.get('/', (req, res) => {
+    console.log('got request for ' + req.originalUrl)
     const last = req.subdomains.length - 1
+    console.log('redirecting to ' + req.subdomains[last])
 
     if(req.subdomains[last] === 'creator') reverseProxy.web(req, res, { target: 'http://paredros-creator/' })
     else if(req.subdomains[last] === 'store') reverseProxy.web(req, res, { target: 'http://paredros-store/' })
     else if(req.subdomains[last] === 'player') reverseProxy.web(req, res, { target: 'http://paredros-player/' })
     else if(req.subdomains[last] === 'login') reverseProxy.web(req, res, { target: 'http://paredros-player/' })
-    else reverseProxy.web(req, res, { target: 'http://it-projekt19-6.informatik.fh-nuernberg.de//' })
+    else res.send('welcome to paredros gateway')
 })
 
 const port = 80;
