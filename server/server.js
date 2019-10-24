@@ -2,27 +2,38 @@
 /* eslint-disable */
 
 const express = require('express')
-const httpProxy = require('http-proxy')
-
 const app = express()
-const reverseProxy = httpProxy.createProxyServer({})
+
+const axios = require('axios')
 
 app.use(express.static(__dirname))
 
 app.get('/login', (req, res) => {
-    res.redirect('http://paredros-login/')
+    axios.get('http://paredros-login/')
+        .then(response => {
+            res.send(response.body)
+        })
 })
 
 app.get('/store', (req, res) => {
-    res.redirect('http://paredros-store/')
+    axios.get('http://paredros-store/')
+        .then(response => {
+            res.send(response.body)
+        })
 })
 
 app.get('/creator', (req, res) => {
-    res.redirect('http://paredros-creator/')
+    axios.get('http://paredros-creator/')
+        .then(response => {
+            res.send(response.body)
+        })
 })
 
 app.get('/player', (req, res) => {
-    res.redirect('http://paredros-player/')
+    axios.get('http://paredros-player/')
+        .then(response => {
+            res.send(response.body)
+        })
 })
 
 const port = 80;
