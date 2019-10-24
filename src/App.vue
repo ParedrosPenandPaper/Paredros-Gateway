@@ -6,18 +6,18 @@
       <label id="paredros-label">Paredros</label>
     </div>
 
-    <div class="routing-panel" id="auth-container" @click="redirectTo('http://login.paredros.it-projekt19-6.informatik.fh-nuernberg.de/')">
+    <div class="routing-panel" id="auth-container" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/login')">
       <p id="auth-paragraph">login</p>
     </div>
 
     <div id="routing-panel-container">
-      <div id="creator-panel " class="routing-panel sized-routing-panel" @click="redirectTo('http://creator.paredros.it-projekt19-6.informatik.fh-nuernberg.de/')">
+      <div id="creator-panel " class="routing-panel sized-routing-panel" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/creator')">
         <p class="routing-panel-paragraph">creator</p>
       </div>
-      <div id="store-panel" class="routing-panel sized-routing-panel" @click="redirectTo('http://store.paredros.it-projekt19-6.informatik.fh-nuernberg.de/')">
+      <div id="store-panel" class="routing-panel sized-routing-panel" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/store')">
         <p class="routing-panel-paragraph">store</p>
       </div>
-      <div id="player-panel" class="routing-panel sized-routing-panel" @click="redirectTo('http://player.paredros.it-projekt19-6.informatik.fh-nuernberg.de/')">
+      <div id="player-panel" class="routing-panel sized-routing-panel" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/player')">
         <p class="routing-panel-paragraph">player</p>
       </div>
     </div>
