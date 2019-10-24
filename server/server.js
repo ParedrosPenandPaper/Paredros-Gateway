@@ -8,6 +8,8 @@ const proxy = require('express-http-proxy');
 
 app.use(express.static(__dirname))
 
+// TODO: use proxy resolver
+
 app.use('/login', proxy('http://paredros-login/'))
 
 app.use('/creator', proxy('http://paredros-creator/'))
