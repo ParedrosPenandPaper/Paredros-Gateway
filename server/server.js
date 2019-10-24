@@ -8,13 +8,13 @@ const proxy = require('express-http-proxy');
 
 app.use(express.static(__dirname))
 
-app.get('/login', proxy('paredros-login/'))
+app.use('/login', proxy('http://paredros-login/'))
 
-app.get('/creator', proxy('paredros-creator/'))
+app.use('/creator', proxy('http://paredros-creator/'))
 
-app.get('/store', proxy('paredros-store/'))
+app.use('/store', proxy('http://paredros-store/'))
 
-app.get('/player', proxy('paredros-player/'))
+app.use('/player', proxy('http://paredros-player/'))
 
 const port = 80;
 
