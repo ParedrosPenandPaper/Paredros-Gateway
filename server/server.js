@@ -1,40 +1,19 @@
 'use strict'
 /* eslint-disable */
 
-const express = require('express')
-const app = express()
+const app = require('express')()
+const proxy = require('express-http-proxy');
 
-const axios = require('axios')
 
 app.use(express.static(__dirname))
 
-app.get('/login', (req, res) => {
-    axios.get('http://paredros-login/')
-        .then(response => {
-            res.send(response.body)
-        })
-})
+app.get('/login', proxy('http://paredros-login/'))
 
-app.get('/store', (req, res) => {
-    axios.get('http://paredros-store/')
-        .then(response => {
-            res.send(response.body)
-        })
-})
+app.get('/creator', proxy('http://paredros-creator/'))
 
-app.get('/creator', (req, res) => {
-    axios.get('http://paredros-creator/')
-        .then(response => {
-            res.send(response.body)
-        })
-})
+app.get('/store', proxy('http://paredros-store/'))
 
-app.get('/player', (req, res) => {
-    axios.get('http://paredros-player/')
-        .then(response => {
-            res.send(response.body)
-        })
-})
+app.get('/player', proxy('http://paredros-player/'))
 
 const port = 80;
 
