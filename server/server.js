@@ -12,9 +12,11 @@ app.use(express.static(__dirname))
 app.get('/', (req, res) => {
     const last = req.subdomains.length - 1
 
-    if(req.subdomains[last] === 'creator') reverseProxy.web(req, res, { target: 'https://paredros-creator/' })
-    if(req.subdomains[last] === 'store') reverseProxy.web(req, res, { target: 'https://paredros-store/' })
-    if(req.subdomains[last] === 'player') reverseProxy.web(req, res, { target: 'https://paredros-player/' })
+    if(req.subdomains[last] === 'creator') reverseProxy.web(req, res, { target: 'http://paredros-creator/' })
+    else if(req.subdomains[last] === 'store') reverseProxy.web(req, res, { target: 'http://paredros-store/' })
+    else if(req.subdomains[last] === 'player') reverseProxy.web(req, res, { target: 'http://paredros-player/' })
+    else if(req.subdomains[last] === 'login') reverseProxy.web(req, res, { target: 'http://paredros-player/' })
+    else reverseProxy.web(req, res, { target: 'http://it-projekt19-6.informatik.fh-nuernberg.de//' })
 })
 
 const port = 80;
