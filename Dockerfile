@@ -1,12 +1,8 @@
-FROM node:10.6-alpine
+FROM jwilder/nginx-proxy:alpine
 
-WORKDIR /usr/src/app
-
-COPY dist/ .
-COPY server/ .
-
-RUN npm install
+COPY dist/ usr/src/app
+COPY server/It-projekt19-6.informatik.fh-nuernberg.de.conf etc/nginx/conf.d/
 
 EXPOSE 80
 
-CMD [ "npm", "run", "start" ]
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,1 +1,1 @@
-docker run -d -p 80:80 --rm --name paredros-gateway --network paredros-net paredros-gateway
+docker run -d -p 80:80 --rm --name paredros-gateway --network paredros-net -v /var/run/docker.sock:/tmp/docker.sock paredros-gateway
