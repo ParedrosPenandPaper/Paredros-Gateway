@@ -6,8 +6,14 @@
       <label id="paredros-label">Paredros</label>
     </div>
 
-    <div class="routing-panel" id="auth-container" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/login')">
-      <p id="auth-paragraph">login</p>
+    <div id="reg-auth-container">
+      <div class="routing-panel reg-auth-container" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/login')">
+        <p class="reg-auth-paragraph">register</p>
+      </div>
+
+      <div class="routing-panel reg-auth-container" @click="redirectTo('http://it-projekt19-6.informatik.fh-nuernberg.de/register')">
+        <p class="reg-auth-paragraph">login</p>
+      </div>
     </div>
 
     <div id="routing-panel-container">
@@ -74,19 +80,15 @@ export default {
   font-size: 7em;
 }
 
-#auth-container{
+#reg-auth-container{
   position: absolute;
   top: 0;
-  right: 0;
+  width: 100%;
 
-  margin: 2vw;
-
-  border-radius: 0.5vw;
-}
-
-#auth-paragraph{
-  margin: 1vh 1vw;
-  font-size: 1.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-content: flex-end;
 }
 
 #routing-panel-container{
@@ -96,6 +98,17 @@ export default {
   flex-flow: row wrap;
   justify-content: space-evenly;
   justify-items: center;
+}
+
+.reg-auth-container{
+  margin: 2vw 2vw 2vw 0;
+  
+  border-radius: 0.5em !important;
+}
+
+.reg-auth-paragraph{
+  margin: 1vh 1vw;
+  font-size: 1.5em;
 }
 
 .sized-routing-panel{
