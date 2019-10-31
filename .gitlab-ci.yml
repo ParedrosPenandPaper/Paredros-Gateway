@@ -1,27 +1,9 @@
 stages:
-  - test
-  - vue-build
   - docker-build
-  
-test:
-  stage: test
-  script: node test/test.js
-  tags:
-    - deploy
-  
-vue-build:
-  stage: vue-build
-  artifacts:
-    paths:
-      - dist
-  script:
-    - npm install --progress=false
-    - npm run build
-  tags:
-    - deploy
 
 docker-build:
   stage: docker-build
   script: docker build -t paredros-gateway .
   tags:
     - deploy
+    
