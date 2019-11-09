@@ -2,28 +2,5 @@
 
 ## Project setup
 ```
-npm install
+docker run -d -p 80:80 --network paredros-net -v /var/run/docker.sock:/tmp/docker.sock:ro --name paredros-gateway paredros-gateway
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
